@@ -3,7 +3,8 @@ import brace from "brace";
 import AceEditor from "react-ace";
 
 import "brace/mode/markdown";
-import "brace/theme/github";
+import "brace/theme/monokai";
+import "brace/keybinding/vim";
 
 export default class Editor extends Component {
   render() {
@@ -13,8 +14,9 @@ export default class Editor extends Component {
         <AceEditor
           style={{ height: `100%` }}
           mode="markdown"
-          theme="github"
+          theme="monokai"
           value={code}
+          keyboardHandler="vim"
           onChange={e => this.props.updateCode(e)}
           name="editor"
           editorProps={{ $blockScrolling: true }}

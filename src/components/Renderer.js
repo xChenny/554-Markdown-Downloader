@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReactMarkdown from "react-markdown";
+import "../styles/github_md.scss";
 
 export default class Renderer extends Component {
   constructor(props) {
