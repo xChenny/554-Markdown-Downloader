@@ -1,11 +1,19 @@
 .editor-page {
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 10fr;
 
-    .renderer {
+    .editor-renderer-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .renderer {
+        }
+
+        .editor {
+        }
+
     }
 
-    .editor {
-    }
 }

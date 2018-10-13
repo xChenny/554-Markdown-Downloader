@@ -8,7 +8,7 @@ import "brace/keybinding/vim";
 
 export default class Editor extends Component {
   render() {
-    const { code } = this.props;
+    const { code, keybindings } = this.props;
     return (
       <div className="editor">
         <AceEditor
@@ -16,7 +16,7 @@ export default class Editor extends Component {
           mode="markdown"
           theme="monokai"
           value={code}
-          keyboardHandler="vim"
+          keyboardHandler={keybindings}
           onChange={e => this.props.updateCode(e)}
           name="editor"
           editorProps={{ $blockScrolling: true }}
